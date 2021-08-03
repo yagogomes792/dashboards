@@ -1,0 +1,326 @@
+ {
+  "metadata": {
+    "configurationVersions": [
+      5
+    ],
+    "clusterVersion": ""
+  },
+  "id": "",
+  "dashboardMetadata": {
+    "name": "User Experience Forecast",
+    "shared": false,
+    "owner": ""
+  },
+  "tiles": [
+    {
+      "name": "Satisfeitos",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 304,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {}
+    },
+    {
+      "name": "Toleráveis",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 608,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {}
+    },
+    {
+      "name": "Insatisfeitos",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 912,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {}
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "markdown": "# Timeframe Atual\n\n"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "markdown": "# 1 semana atrás\n\n"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "markdown": "# 2 semanas atrás\n\n"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "markdown": "# 3 semanas atrás\n\n"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 304,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-3w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 304,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-2w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 304,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-1w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 304,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 608,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-3w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 608,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-2w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 608,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-1w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 608,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 912,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-3w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 912,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-2w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 912,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": "-1w"
+      },
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 912,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {},
+      "customName": "User sessions query results",
+      "query": "SELECT count(DISTINCT userSessionId) as \"Sessões\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    }
+  ]
+}
